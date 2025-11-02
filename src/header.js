@@ -26,8 +26,8 @@ header a:hover, header a:focus, header a:active {
 const Header = () => (
   <header>
     <style dangerouslySetInnerHTML={{ __html: styles }} />
-    <a href="https://github.com/zacanger" target="_blank" rel="noopener noreferrer">
-      zacanger on github
+    <a href="https://github.com/zautumnz" target="_blank" rel="noopener noreferrer">
+      zautumnz on github
     </a>
   </header>
 )

@@ -63,14 +63,14 @@ export default class App extends Component {
   }
 
   fetchAllRepos () {
-    return fetch('https://api.github.com/users/zacanger/repos?sort=updated')
+    return fetch('https://api.github.com/users/zautumnz/repos?sort=updated')
       .then((res) => {
         const links = res.headers.get('link').split(',')
         const totalPages = links.find((el) => el.includes('last'))
         const pageAmount = totalPages.match(/page=(\d)/)[1]
         const buildLinks = (n) =>
           Array.from({ length: n }, (_, i) =>
-            `https://api.github.com/users/zacanger/repos?sort=updated&page=${i + 1}`
+            `https://api.github.com/users/zautumnz/repos?sort=updated&page=${i + 1}`
           )
 
         const fetches = buildLinks(pageAmount)
